@@ -1,9 +1,9 @@
 package Logica.servicios;
 
-import logica.DAO.ControlDAO;
-import logica.entidades.Autor;
-import logica.entidades.Editorial;
-import logica.entidades.Libro;
+import Logica.DAO.ControlDAO;
+import Logica.entidades.Autor;
+import Logica.entidades.Editorial;
+import Logica.entidades.Libro;
 import java.util.List;
 import java.util.Scanner;
 

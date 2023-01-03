@@ -3,8 +3,8 @@ package Logica.servicios;
 
 import java.util.List;
 import java.util.Scanner;
-import logica.DAO.ControlDAO;
-import logica.entidades.Cliente;
+import Logica.DAO.ControlDAO;
+import Logica.entidades.Cliente;
 
 public class clienteServicio {
 

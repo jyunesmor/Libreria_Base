@@ -3,13 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logica.main;
+package Logica.main;
 
 import Logica.servicios.clienteServicio;
 import Logica.servicios.libroServicio;
 import Logica.servicios.prestamoServicio;
-import logica.DAO.ControlDAO;
-import logica.entidades.Prestamo;
+import Logica.DAO.ControlDAO;
+import Logica.entidades.Prestamo;
 //import logica.servicio.autorServicio;
 //import logica.servicio.clienteServicio;
 //import logica.servicio.editorialServicio;

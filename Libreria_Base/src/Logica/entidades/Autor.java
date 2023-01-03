@@ -1,5 +1,5 @@
 
-package logica.entidades;
+package Logica.entidades;
 
 import java.io.Serializable;
 import javax.persistence.Column;
@@ -9,7 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Editorial implements Serializable {
+public class Autor implements Serializable {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -19,16 +19,17 @@ public class Editorial implements Serializable {
     private String nombre;
     private Boolean alta;
 
-    public Editorial() {
+    public Autor() {
     }
 
-    public Editorial(Integer id, String nombre, Boolean alta) {
+    public Autor(Integer id, String nombre, Boolean alta) {
         this.id = id;
         this.nombre = nombre;
         this.alta = alta;
     }
 
-    public Editorial(String nombre, Boolean alta) {
+    
+    public Autor(String nombre, Boolean alta) {
         this.nombre = nombre;
         this.alta = alta;
     }
@@ -51,7 +52,7 @@ public class Editorial implements Serializable {
 
     @Override
     public String toString() {
-        return "Editorial{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
+        return "Autor{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
     }
     
     

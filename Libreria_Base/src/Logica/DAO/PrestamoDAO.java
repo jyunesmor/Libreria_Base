@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Prestamo;
+import Logica.entidades.Prestamo;
 import java.util.List;
 
 /**

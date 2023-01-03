@@ -1,6 +1,6 @@
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Libro;
+import Logica.entidades.Libro;
 import java.util.List;
 
 public class LibroDAO extends DAO<Libro> {

@@ -1,10 +1,10 @@
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Autor;
-import logica.entidades.Cliente;
-import logica.entidades.Editorial;
-import logica.entidades.Libro;
-import logica.entidades.Prestamo;
+import Logica.entidades.Autor;
+import Logica.entidades.Cliente;
+import Logica.entidades.Editorial;
+import Logica.entidades.Libro;
+import Logica.entidades.Prestamo;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;

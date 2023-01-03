@@ -2,10 +2,10 @@
 package Logica.servicios;
 
 
-import logica.entidades.Editorial;
+import Logica.entidades.Editorial;
 import java.util.List;
 import java.util.Scanner;
-import logica.DAO.ControlDAO;
+import Logica.DAO.ControlDAO;
 
 
 public class editorialServicio {

@@ -1,5 +1,5 @@
 
-package logica.entidades;
+package Logica.entidades;
 
 import java.io.Serializable;
 import javax.persistence.Entity;

@@ -1,7 +1,7 @@
 
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Editorial;
+import Logica.entidades.Editorial;
 import java.util.List;
 
 public class EditorialDAO extends DAO<Editorial> {

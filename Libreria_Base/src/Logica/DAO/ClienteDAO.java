@@ -1,6 +1,6 @@
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Cliente;
+import Logica.entidades.Cliente;
 import java.util.List;
 
 public class ClienteDAO extends DAO<Cliente> {

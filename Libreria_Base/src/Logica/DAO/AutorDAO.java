@@ -1,7 +1,7 @@
 
-package logica.DAO;
+package Logica.DAO;
 
-import logica.entidades.Autor;
+import Logica.entidades.Autor;
 import java.util.List;
 
 public class AutorDAO extends DAO<Autor> {

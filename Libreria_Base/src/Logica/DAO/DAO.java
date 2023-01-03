@@ -1,4 +1,4 @@
-package logica.DAO;
+package Logica.DAO;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;

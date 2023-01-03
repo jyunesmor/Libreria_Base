@@ -5,9 +5,9 @@ import java.util.Date;
 
 
 import java.util.Scanner;
-import logica.DAO.ControlDAO;
-import logica.entidades.Cliente;
-import logica.entidades.Prestamo;
+import Logica.DAO.ControlDAO;
+import Logica.entidades.Cliente;
+import Logica.entidades.Prestamo;
 
 public class prestamoServicio {
 

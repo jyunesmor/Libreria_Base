@@ -5,10 +5,10 @@
  */
 package Logica.servicios;
 
-import logica.entidades.Autor;
+import Logica.entidades.Autor;
 import java.util.List;
 import java.util.Scanner;
-import logica.DAO.ControlDAO;
+import Logica.DAO.ControlDAO;
 
 /**
  *
