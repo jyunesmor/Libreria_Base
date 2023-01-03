@@ -8,6 +8,7 @@ import java.util.Scanner;
 import Logica.DAO.ControlDAO;
 import Logica.entidades.Cliente;
 import Logica.entidades.Prestamo;
+import java.util.List;
 
 public class prestamoServicio {
 
@@ -15,9 +16,9 @@ public class prestamoServicio {
     ControlDAO cd = new ControlDAO();
     libroServicio ls = new libroServicio();
     clienteServicio cs = new clienteServicio();
-    prestamoServicio ps = new prestamoServicio();
 
-    public Prestamo cargarprestamo() {
+
+    public void cargarPrestamo() {
         Prestamo p = new Prestamo();
         System.out.println(" ----  Carga Prestamo del Libro  ---- ");
         System.out.println("");
@@ -51,8 +52,50 @@ public class prestamoServicio {
 
         Date fp = new Date(anio - 1900, mes - 1, dia);
         p.setfPrestamo(fp);
-
+        
         System.out.println(p.toString());
-        return p;
+        cd.crearPrestamoBD(p);
     }
+    
+    public void devolverPrestamo() {
+
+        System.out.println(" ----  Carga Devolucion Prestamo  ---- ");
+        System.out.println("");
+        /*  Mostrar Prestamos  */
+ /*  -------------------------------------------   */
+        System.out.println(" Los Prestamos Activos son : ");
+        System.out.println("");
+        mostrarPrestamos();
+        System.out.println(" ¿Ingrese el Libro que sera prestado? por ID");
+        Integer idl = leer.nextInt();
+       
+        Prestamo p = cd.obtenerPrestamo(idl);
+               
+        /*  -------------------------------------------   */
+        System.out.println(" ¿Fecha del Prestamo? ");
+
+        System.out.print("Ingrese el dia: ");
+        int dia = leer.nextInt();
+        System.out.print("Ingrese el mes: ");
+        int mes = leer.nextInt();
+        System.out.print("Ingrese el año; ");
+        int anio = leer.nextInt();
+
+        Date fp = new Date(anio - 1900, mes - 1, dia);
+        p.setDevPrestamo(fp);
+        
+        System.out.println(p.toString());
+        cd.modificarPrestamoBD(p);
+    }
+    
+    public void mostrarPrestamos(){
+        List<Prestamo> plist = cd.obtenerPrestamos();
+        for (Prestamo p : plist) {
+            System.out.println(p.toString());
+        }
+        
+        
+    }
+    
+    
 }
