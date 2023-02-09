@@ -30,7 +30,7 @@ public class LibroDAO extends DAO<Libro> {
     public void eliminarLibro(Integer id) {
         try {
             conectar();
-            Libro l = em.find(Libro.class, id);
+            Libro l = em.find(Libro.class,id);
             eliminar(l);
         } catch (Exception e) {
             throw e;

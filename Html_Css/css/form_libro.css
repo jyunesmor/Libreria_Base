@@ -1,0 +1,46 @@
+header{
+    background-color: rgb(226, 235, 112);
+}
+
+.logo{
+    width: 150px;
+    height: 70px;
+    background-color: rgb(226, 235, 112);
+}
+.nav-item{
+    font-size: 1.5em;
+}
+#form_libro{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    
+}
+
+#form_autor{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    
+}
+
+#form_editorial{
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: baseline;
+    
+}
+
+.btn{
+    width: 95%;
+    text-align: center;
+    align-items: center;
+}
+
+.text1{
+    width: 15%;
+}
+

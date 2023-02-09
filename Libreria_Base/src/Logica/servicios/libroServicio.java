@@ -19,7 +19,7 @@ public class libroServicio {
         System.out.println(" ----  Carga de Libro  ---- ");
         System.out.println("");
         System.out.println(" ¿Cual es el codigo ISBN del Libro? ");
-        li.setIsbn(leer.nextLong()); 
+        li.setIsbn(leer.nextLong());
         System.out.println(" ¿Cual es el Titulo del Libro? ");
         li.setTitulo(leer.next());
         System.out.println(" ¿Cual es el año del Libro? ");
@@ -43,7 +43,7 @@ public class libroServicio {
         if (resp.equalsIgnoreCase("s")) {
             System.out.println(" Selecciones al mismo con su Codigo");
             Integer is = leer.nextInt();
-            li.setAutor(cd.obtenerAutor(is)); 
+            li.setAutor(cd.obtenerAutor(is));
         } else {
             Autor af = as.cargarAutor();
             li.setAutor(af);
@@ -67,7 +67,7 @@ public class libroServicio {
             li.setEditorial(ed);
         }
         /*  -------------------------------------------   */
-        li.setEjemplaresRestantes(li.getEjemplares()-li.getEjemplaresPrestados());
+        li.setEjemplaresRestantes(li.getEjemplares() - li.getEjemplaresPrestados());
 
         if (li == null) {
             System.out.println(" El Libro esta Vacio ");
@@ -142,9 +142,18 @@ public class libroServicio {
 
     public void mostrarlibros() {
         List<Libro> liblist = cd.obtenerLibros();
-            for (Libro libro : liblist) {
-                System.out.println(libro.toString());
-             } 
+        for (Libro libro : liblist) {
+            System.out.println(libro.toString());
+        }
+    }
+
+    public void mostrarLibrosDisponibles() {
+        List<Libro> liblist = cd.obtenerLibros();
+        for (Libro libro : liblist) {
+            if (libro.getEjemplaresRestantes() >= 1) {
+               System.out.println(libro.toString()); 
+            }
+        }
     }
 
     public void libroPorISBN() {

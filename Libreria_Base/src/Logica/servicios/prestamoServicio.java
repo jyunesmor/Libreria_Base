@@ -7,6 +7,7 @@ import java.util.Date;
 import java.util.Scanner;
 import Logica.DAO.ControlDAO;
 import Logica.entidades.Cliente;
+import Logica.entidades.Libro;
 import Logica.entidades.Prestamo;
 import java.util.List;
 
@@ -22,16 +23,21 @@ public class prestamoServicio {
         Prestamo p = new Prestamo();
         System.out.println(" ----  Carga Prestamo del Libro  ---- ");
         System.out.println("");
-        /*  Carga Libro  */
- /*  -------------------------------------------   */
+                          /*  Carga Libro  */
+        /*  -------------------------------------------   */
         System.out.println(" Libros Disponibles para el prestamo ");
         System.out.println("");
-        ls.mostrarlibros();
+        ls.mostrarLibrosDisponibles();
         System.out.println(" ¿Ingrese el Libro que sera prestado? por ID");
         Integer idl = leer.nextInt();
-        p.setLibro(cd.obtenerLibro(idl));
-        /* Carga Clientes */
- /*  -------------------------------------------   */
+        Libro lp = cd.obtenerLibro(idl);
+        p.setLibro(lp);
+           /* Modifico los Valores de Libro */
+        lp.setEjemplaresPrestados(lp.getEjemplaresPrestados()+1);
+        lp.setEjemplaresRestantes(lp.getEjemplares()-lp.getEjemplaresPrestados());
+        cd.modificarLibroBD(lp);
+                         /* Carga Clientes */
+        /*  -------------------------------------------   */
         System.out.println(" Clientes Disponibles para el prestamo ");
         System.out.println("");
         cs.mostrarClientes();
@@ -86,6 +92,7 @@ public class prestamoServicio {
         
         System.out.println(p.toString());
         cd.modificarPrestamoBD(p);
+
     }
     
     public void mostrarPrestamos(){
@@ -95,6 +102,14 @@ public class prestamoServicio {
         }
         
         
+    }
+
+    void modificarPrestamo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    void eliminarPrestamo() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     
